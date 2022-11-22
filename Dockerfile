@@ -2,6 +2,7 @@ FROM ubuntu:20.04
 
 ENV YAMLLINT_VERSION=1.26.3
 ENV PRETTIER_VERSION=2.6.2
+ENV GIT_FORMAT_STAGED_VERSION=3.0.0
 ENV INSTALL_DIR="/home"
 
 RUN export DEBIAN_FRONTEND=noninteractive; \
@@ -19,6 +20,6 @@ RUN export DEBIAN_FRONTEND=noninteractive; \
 
 WORKDIR ${INSTALL_DIR}
 
-RUN npm install prettier@${PRETTIER_VERSION}
+RUN npm install prettier@${PRETTIER_VERSION} git-format-staged@${GIT_FORMAT_STAGED_VERSION}
 RUN pip3 install "yamllint==${YAMLLINT_VERSION}"
 ENV PATH="${INSTALL_DIR}/node_modules/.bin:$PATH"
