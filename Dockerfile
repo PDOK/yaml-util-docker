@@ -7,10 +7,9 @@ ENV INSTALL_DIR="/home"
 
 RUN export DEBIAN_FRONTEND=noninteractive; \
     apt-get update; \
-    apt-get install -y curl \
+    apt-get install -y --no-install-recommends curl \
     python3-pip \
     git
-
 
 RUN curl -fsSL https://deb.nodesource.com/setup_16.x | bash -
 
