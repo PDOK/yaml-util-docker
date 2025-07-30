@@ -1,6 +1,6 @@
 # yaml-util-docker
 
-Docker image met [*Yamllint*](https://github.com/adrienverge/yamllint) en [*Prettier*](https://prettier.io/).
+Docker image met [*Yamllint*](https://github.com/adrienverge/yamllint) en [*Prettier*](https://prettier.io/) see those links for documenation on commands and configuration options.
 
 ```sh
 docker build . -t yaml-util
