@@ -5,7 +5,7 @@ ENV PRETTIER_VERSION=3.9.6
 ENV GIT_FORMAT_STAGED_VERSION=4.0.2
 ENV INSTALL_DIR="/home"
 
-RUN apk add --no-cache python3 py3-pip git \
+RUN apk add --no-cache bash python3 py3-pip git \
     && pip3 install --no-cache-dir --break-system-packages "yamllint==${YAMLLINT_VERSION}"
 
 WORKDIR ${INSTALL_DIR}
